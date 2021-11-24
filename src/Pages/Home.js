@@ -1,11 +1,14 @@
 import React from 'react'
 import AppsIcon from '@material-ui/icons/Apps';
 import { Avatar } from '@material-ui/core';
+import Search from './Search';
+import "./Home.css"
 
 
 function Home() {
     return (
         <div className="home">
+            <div className="home__header">
             <div className="home__headerLeft">
                 <p>About</p>
                 <p>Store</p>
@@ -18,8 +21,13 @@ function Home() {
                <Avatar />
             
             </div>
+            </div>
             <div className="home__body">
                 <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" />
+
+                <div className="home__inputContainer">
+                <Search />
+                </div>
             </div>
         </div>
     )
