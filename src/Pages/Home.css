@@ -26,7 +26,11 @@
     margin-left: 20px;
     font-size: 15px;
 }
-.home__headerRight .MuiSvgIcon-root{
+.home__headerRight>svg{
+    margin-left: 20px;
+}
+
+.home__headerRight .MuiAvatar-root{
     margin-left: 20px;
 }
 .home__body{
