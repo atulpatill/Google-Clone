@@ -6,7 +6,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import SearchPage from './SearchPage';
+import SearchPage from './Pages/SearchPage';
 
 
 
