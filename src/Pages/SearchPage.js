@@ -61,15 +61,16 @@ function SearchPage() {
         </div>
         </div>
         <div className="searchPage__results">
+          <p className="searchPage__resultCount">About 48,20,000 results (0.61 seconds)</p>
              <a href="" className="searchPage__resultLink">
-               <img src="https://avatars.githubusercontent.com/u/69110542?v=4"/>
+               <img src="https://avatars.githubusercontent.com/u/69110542?v=4" className="searchPage__resultImage"/>
                github.com
              </a>
 
              <a href="" className="searchPage__resultTitle">
                <h2>Camel Coder</h2>
              </a>
-             <p className="searchPage__resultDescription">he has 13 repo available dude</p>
+             <p className="searchPage__resultDescription">he has 13 repo available dude, Follow him on github</p>
         </div>
         </div>
     )
