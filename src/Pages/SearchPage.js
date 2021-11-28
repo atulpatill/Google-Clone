@@ -60,6 +60,17 @@ function SearchPage() {
         </div>
         </div>
         </div>
+        <div className="searchPage__results">
+             <a href="" className="searchPage__resultLink">
+               <img src="https://avatars.githubusercontent.com/u/69110542?v=4"/>
+               github.com
+             </a>
+
+             <a href="" className="searchPage__resultTitle">
+               <h2>Camel Coder</h2>
+             </a>
+             <p className="searchPage__resultDescription">he has 13 repo available dude</p>
+        </div>
         </div>
     )
 }
