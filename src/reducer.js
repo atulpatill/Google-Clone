@@ -16,6 +16,6 @@ export const actionTypes = {
               default :
               return state
       }
-  }
+  } 
 
   export default reducer
