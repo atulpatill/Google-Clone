@@ -8,9 +8,14 @@ import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import RoomIcon from '@material-ui/icons/Room';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import "./SearchPage.css"
+import { useStateValue } from '../StateProvider';
 
 
 function SearchPage() {
+
+   const [{term}] = useStateValue();
+   console.log(term);
+
     return (
         <div className="searchPage">
           <div className="searchPage__header">
