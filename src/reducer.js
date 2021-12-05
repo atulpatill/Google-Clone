@@ -1,13 +1,16 @@
+// export const initialState = {
+//     term: null
+// } 
 export const initialState = {
-    term: null
-} 
+    term: []
+}
 
 export const actionTypes = {
     SET_SEARCH_TERM : "SET_SEARCH_TERM",
 }
 
   const reducer = (state=initialState, action)=>{
-      switch(action.types){
+      switch(action.type){
           case "SET_SEARCH_TERM" :
               return {
                   ...state,

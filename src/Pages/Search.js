@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import SearchIcon from '@material-ui/icons/Search';
 import MicIcon from '@material-ui/icons/Mic';
 import { Button } from '@material-ui/core';
@@ -11,6 +11,8 @@ function Search({hidebuttons}) {
 
   const[{}, dispatch] = useStateValue();
     const [input, setInput] = useState("") 
+
+   
 
     const history = useHistory()
 
