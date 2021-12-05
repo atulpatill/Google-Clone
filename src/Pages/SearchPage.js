@@ -70,19 +70,34 @@ function SearchPage() {
         </div>
         </div>
     {
-          // If we have `term` them only show this data
-          term && (
+          // If we have `term` then only show this data
+          term && data && (
         <div className="searchPage__results">
-          <p className="searchPage__resultCount">About 48,20,000 results (0.61 seconds)</p>
-             <a href="" className="searchPage__resultLink">
-               <img src="https://avatars.githubusercontent.com/u/69110542?v=4" className="searchPage__resultImage"/>
-               github.com
-             </a>
+          <p className="searchPage__resultCount">About {data?.searchInformation.formattedTotalResults} results ({data?.searchInformation.formattedSearchTime}) for {term} </p>
 
-             <a href="" className="searchPage__resultTitle">
-               <h2>Camel Coder</h2>
-             </a>
-             <p className="searchPage__resultDescription">he has 13 repo available dude, Follow him on github</p>
+          {/* Loop all the data by using map function and show the result of search term on web page  */}
+
+          {/* {data?.itmes.map((item)=>(
+              <div className="searchPage__result">
+              <a href={item.Link} className="searchPage__resultLink">
+
+              {item.pagemap?.cse_images?.length > 0 && item.pagemap?.cse_images[0]?.src(
+               <img src={item.pagemap?.cse_images[0]?.src} className="searchPage__resultImage"/>
+              )}
+               
+                {item.displayLink}
+              </a>
+ 
+              <a href={item.Link} className="searchPage__resultTitle">
+                <h2>{item.title}</h2>
+              </a>
+              <p className="searchPage__resultDescription">{item.snippet}</p>
+              </div>
+            ))
+          }
+          */}
+
+
         </div>)
         }
         </div>
