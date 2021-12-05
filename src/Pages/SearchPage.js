@@ -9,12 +9,16 @@ import RoomIcon from '@material-ui/icons/Room';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import "./SearchPage.css"
 import { useStateValue } from '../StateProvider';
+import useGoogleSearch from '../useGoogleSearch';
 
 
 function SearchPage() {
 
    const [{term}] = useStateValue();
-   console.log(term);
+
+   const { data } = useGoogleSearch(term);
+   
+   console.log(data);
 
     return (
         <div className="searchPage">
@@ -65,6 +69,9 @@ function SearchPage() {
         </div>
         </div>
         </div>
+    {
+          // If we have `term` them only show this data
+          term && (
         <div className="searchPage__results">
           <p className="searchPage__resultCount">About 48,20,000 results (0.61 seconds)</p>
              <a href="" className="searchPage__resultLink">
@@ -76,7 +83,8 @@ function SearchPage() {
                <h2>Camel Coder</h2>
              </a>
              <p className="searchPage__resultDescription">he has 13 repo available dude, Follow him on github</p>
-        </div>
+        </div>)
+        }
         </div>
     )
 }
