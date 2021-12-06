@@ -71,31 +71,31 @@ function SearchPage() {
         </div>
     {
           // If we have `term` then only show this data
-          term && data && (
+          term && (
         <div className="searchPage__results">
-          <p className="searchPage__resultCount">About {data?.searchInformation.formattedTotalResults} results ({data?.searchInformation.formattedSearchTime}) for {term} </p>
+          <p className="searchPage__resultCount"> About {data?.searchInformation.formattedTotalResults} results ({data?.searchInformation.formattedSearchTime}) for {term} </p>
 
           {/* Loop all the data by using map function and show the result of search term on web page  */}
 
-          {/* {data?.itmes.map((item)=>(
+          {data?.items.map((item)=>(
               <div className="searchPage__result">
-              <a href={item.Link} className="searchPage__resultLink">
+              <a href={item.link} className="searchPage__resultLink"  target="_blank">
 
-              {item.pagemap?.cse_images?.length > 0 && item.pagemap?.cse_images[0]?.src(
-               <img src={item.pagemap?.cse_images[0]?.src} className="searchPage__resultImage"/>
+              {item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src && (
+               <img src={item.pagemap?.cse_image[0]?.src} className="searchPage__resultImage" alt=""/>
               )}
                
                 {item.displayLink}
               </a>
  
-              <a href={item.Link} className="searchPage__resultTitle">
+              <a href={item.link} className="searchPage__resultTitle"  target="_blank">
                 <h2>{item.title}</h2>
               </a>
               <p className="searchPage__resultDescription">{item.snippet}</p>
               </div>
             ))
           }
-          */}
+         
 
 
         </div>)
