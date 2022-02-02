@@ -3,7 +3,7 @@
 * Tech Stack Used
 1. Reactjs
 2. Context API for State Mangement.
-3. Material UI
+3. Styled-Component
 4. HTML
 5. CSS 
 6. Google API Key
